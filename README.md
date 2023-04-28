@@ -17,7 +17,7 @@ Cómo ejecutar pruebas
 Para probar el contrato inteligente TokenERC20Burning, se puede utilizar el entorno de pruebas en Remix. Se recomienda probar todas las funciones del contrato y verificar que se comporten como se espera.
 
 Mantenedores
-Este proyecto es mantenido por [tu nombre] y cualquier contribución será muy apreciada.
+Este proyecto es mantenido por Francisco Elizalde y cualquier contribución será muy apreciada.
 
 Historial de cambios
 Versión 1.0.0: Funcionalidades básicas del contrato ERC-20 y función de quemado añadida (2023-04-28).
