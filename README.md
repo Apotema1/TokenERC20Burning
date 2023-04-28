@@ -20,6 +20,6 @@ Mantenedores
 Este proyecto es mantenido por [tu nombre] y cualquier contribución será muy apreciada.
 
 Historial de cambios
-Versión 1.0.0: Funcionalidades básicas del contrato ERC-20 y función de quemado añadida (2023-04-28)
+Versión 1.0.0: Funcionalidades básicas del contrato ERC-20 y función de quemado añadida (2023-04-28).
 
 
