@@ -1,0 +1,21 @@
+constructor() ERC20Burnable() ERC20("elizaldeToken", "ET") {
+    _mint(msg.sender, 1000 * (10**decimals()));
+}
+
+function decimals() public pure override returns (uint8) {
+    return 6;
+}
+
+function Pausar() public onlyOwner {
+    _pause();
+}
+
+function Despausar() public onlyOwner {
+    _unpause();
+}
+
+function Quemar(uint cantidad) public {
+    require(paused() != true, "El contracto esta pausado");
+    burn(cantidad);
+}
+}
