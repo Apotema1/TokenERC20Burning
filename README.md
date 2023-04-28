@@ -1,35 +1,25 @@
-# TokenERC20Burning
-Mi primer código de token ERC20 que tiene una extención para auto-quema.
-// SPDX-License-Identifier: GPL-3.0
+TokenERC20Burning
+TokenERC20Burning es un contrato inteligente que implementa un token estándar ERC-20 en la plataforma Ethereum. Este contrato inteligente también incluye una función de quemado (burn) que permite a los usuarios eliminar de forma permanente una cantidad específica de tokens de la circulación.
 
-pragma solidity >=0.7.0 <0.9.0;
+Instalación
+Para utilizar el contrato TokenERC20Burning, se puede desplegar directamente en Remix, la herramienta de desarrollo de contratos inteligentes de Ethereum. No es necesario instalar ningún paquete adicional.
 
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+Uso
+El contrato TokenERC20Burning se puede utilizar para crear un token ERC-20 y permitir su transferencia entre cuentas. Además, incluye una función adicional de quemado que permite a los usuarios eliminar una cantidad específica de tokens de la circulación.
 
-contract DesafioExtensiones is ERC20Burnable, Pausable, Ownable {
+Contribución
+Si desea contribuir al proyecto TokenERC20Burning, se puede hacer una solicitud de extracción en GitHub. También puede revisar la lista de problemas para ver si hay problemas abiertos que pueda abordar.
 
-    constructor() ERC20Burnable() ERC20("elizaldeToken", "ET") {
-        _mint(msg.sender, 1000 * (10**decimals()));
-    }
+Licencia
+Este proyecto se distribuye bajo la licencia MIT. Consulte el archivo LICENSE para obtener más información.
 
-    function decimals() public pure override returns (uint8) {
-        return 6;
-    }
+Cómo ejecutar pruebas
+Para probar el contrato inteligente TokenERC20Burning, se puede utilizar el entorno de pruebas en Remix. Se recomienda probar todas las funciones del contrato y verificar que se comporten como se espera.
 
-    function Pausar() public onlyOwner {
-        _pause();
-    }
+Mantenedores
+Este proyecto es mantenido por [tu nombre] y cualquier contribución será muy apreciada.
 
-    function Despausar() public onlyOwner {
-        _unpause();
-    }
-
-    function Quemar(uint cantidad) public {
-        require(paused() != true, "El contracto esta pausado");
-        burn(cantidad);
-    }
+Historial de cambios
+Versión 1.0.0: Funcionalidades básicas del contrato ERC-20 y función de quemado añadida (2023-04-28)
 
 
-}
